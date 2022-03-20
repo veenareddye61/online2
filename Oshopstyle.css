@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    height:auto;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px #ccc;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 16px 8%;
+}
+.main-carousel{
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.carousel-cell{
+    width: 70%;
+    height: 300px;
+    border-radius: 5px;
+    margin:0 8%;
+    counter-increment: gallery-cell;
+}
+.carousel-cell img{
+    height: 200px;
+}
+.carousel-cell::before{
+    display: block;
+    content: '';
+}
+main{
+    margin-top: 100px;
+}
+#left-menu{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#right-menu{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#logo {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-right: 16px;
+}
+#left-menu > a {
+    text-decoration: none;
+    color: black;
+    margin-left: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#left-menu > a {
+    text-decoration: none;
+    color: black;
+    margin-left: 32px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#search-wrapper {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+#search-wrapper > i {
+    position: absolute;
+    color: #999;
+    font-size: 18px;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+}
+
+#search-box {
+    width: 100%;
+    border: 1px solid rgb(245, 242, 242);
+    background-color: rgb(245, 242, 242);
+    box-sizing: border-box;
+    padding: 10px 24px 8px 48px;
+    color: black;
+    outline: none;
+}
+#cart-count {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    background-color: #009688;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+}
+#cart-wrapper {
+    position: relative;
+    margin-right: 32px;
+}
+#cart-wrapper i {
+    font-size: 18px;
+    cursor: pointer;
+}
+#cart-wrapper > a {
+    text-decoration: none;
+    color: black;
+}
+#right-menu > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#clothes{
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    grid-gap: 20px;
+    padding:0 7% 0 7%;
+    box-sizing: border-box;
+
+    
+}
+.ctab{
+    height:400px;
+   
+    max-width: 230px;
+    
+    box-shadow: 0 3px 10px rgb(204, 204, 204);
+    box-sizing: border-box;
+}
+.ctab:hover{
+    box-shadow: 0 8px 10px rgb(116, 115, 115);
+    
+}
+.itab{
+    width: 100%;
+    height: 70%;
+}
+#accessories{
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    grid-gap:20px;
+    padding:0 7% 0 7%;
+    box-sizing: border-box;
+}
+h2{
+    margin: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+}
+.ttab{
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+.bpara{
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin: 10px 0px 0px 0px;
+    color: rgb(110,110,110);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+.price{
+    padding-left: 10px;
+    color: #009688;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    font-weight: 600;
+    margin: 10px 0px 0px 0px;
+}
+#edyodalogo {
+    width: 128px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+#main-cart-div{
+    display: flex;
+    justify-content: start;
+    padding: 2% 8%;
+    box-sizing: border-box;
+}
+#cart-div1{
+    width: 50%;
+    
+}
+#cart-div2{
+    width: 50%;
+    height: fit-content;
+    margin-top: 48px;
+    margin-left: 3%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px #ccc;
+    border-radius: 5px;
+    padding: 16px;
+}
+.chcard{
+    display: flex;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px #ccc;
+    border-radius: 5px;
+    background-color: white;
+    max-width: 600px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+.prodImg{
+    width: 80px;
+    min-width: 80px;
+    border-radius: 5px;
+    margin-right: 16px;
+}
+.prodName{
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+.prodNum{
+    margin: 0;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+#cout{
+    font-size: 30px;
+    margin-left: 30px;
+}
+footer{
+    display: flex;
+    background-color: #1c1b1e;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 4% 8%;
+    width: 100%;
+    margin-top: 20px;
+}
+.footer-link{
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-top: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.8;
+}
+.footer-heading {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+#maindesdiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    width: 80vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+#largeimg{
+    width:33%;
+    height:auto;
+    box-sizing: border-box;
+}
+#description{
+    width:63%;
+    height: auto;
+
+    box-sizing: border-box;
+}
+#bimg{
+    width:99%;
+    height: 99%;
+
+}
+.addToCart{
+    height: 50px;
+    width: 150px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    background-color: #009688;
+    margin-left: 30%;
+    box-shadow: none;
+}
+.heading{
+    font-weight: 400;
+    margin: 20px;
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+.pbrand{
+    font-size: 20px;
+    margin: 20px;
+}
+.pprice{
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+}
+.pprice2{
+    display: inline-block;
+    color: #009688;
+    font-weight: 500;
+}
+.pdes{
+    font-size: 20px;
+    margin: 20px;
+}
+.dtext{
+    font-size: 15px;
+    margin: 20px;
+    color: #86939e;
+}
+.pphotowrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+.pdiv{
+    width: 19%;
+    height: auto;
+
+}
+.pphoto{
+    width: 80%;
+    height: 80%;
+    margin: 10px;
+    padding: 4%;
+    box-sizing: border-box;   
+}
+.active{
+    border: 2px solid #009688;
+    border-radius: 6%;
+}
+
+#conimg{
+   height: 200px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRvlzNuT7VnL4jjdHd72w_8L8eY46Rv19E3g&usqp=CAU");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+#cfrmtxt{
+    text-align: center;
+}
+#cmail{
+    text-align: center;
+}
+@media(max-width:769px){
+    #largeimg{
+        width: 99%;
+        margin-top: 30px;
+
+    }
+    #description{
+        width: 99%;
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:1024px){
+    #clothes{
+    grid-template-columns: 24% 24% 24% 24%;
+    }
+    #accessories{
+        grid-template-columns: 24% 24% 24% 24%;
+    }
+}
+
+@media(max-width:768px){
+    #clothes{
+    grid-template-columns: 32% 32% 32%;
+
+    }
+    .ctab{
+        margin-top: 30px;
+    }
+    #accessories{
+        grid-template-columns: 32% 32% 32%;
+    }
+}
+@media(max-width:600px){
+    #clothes{
+    grid-template-columns: 48% 48%;
+   
+
+    }
+    .ctab{
+        margin-right: 10px;
+    }
+    
+    #accessories{
+        grid-template-columns: 48% 48%;
+    }
+}
+@media(max-width: 480px){
+    #clothes{
+        padding:0 3.75% 0 3.75%;
+      }
+      /*.itab{
+          height: 65%;
+      }*/
+      #accessores{
+        padding : 0 3.5% 0 3.5%;
+      }
+}
+@media(max-width:390px){
+    .itab{
+        height:65%;
+    }
+    @media(max-width:321px){
+        .itab{
+            height:60%;
+        }
+}
+}
