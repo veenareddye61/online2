@@ -19,7 +19,7 @@ productdetails = `<div id="largeimg">
 <p class="pdes">Description</p>
 <p class="dtext">${productList.description}</p>
 <div class="pphotowrap"></div>
-<button class="addToCart" onClick="addToCart('${productList.preview}','${productList.name}','${productList.price}')">Add to cart</button>
+<button class="addToCart" onClick="addToCart('${productId}','${productList.preview}','${productList.name}','${productList.price}')">Add to cart</button>
 </div>
 `
 maindesWrap.append(productdetails);
@@ -35,29 +35,30 @@ for(j=0;j<productList.photos.length;j++){
            photodiv.append(prphoto);
            photoWrap.append(photodiv);
            var photo1 = document.getElementById("simg0");
-           photo1.classList.add("active");
+           photo1.classList.add("imgactive");
            prphoto.onclick=function smallimage(simg){
                var simg=this.id;
                var smlphoto= document.getElementsByClassName("pphoto");
            
                for(k=0; k<smlphoto.length;k++)
-               {smlphoto[k].classList.remove("active")}
+               {smlphoto[k].classList.remove("imgactive")}
                console.log(this.id);
                var activesmallImg=document.getElementById(simg);
                console.log(activesmallImg);
-               activesmallImg.classList.add("active");
+               activesmallImg.classList.add("imgactive");
                var bigimg = document.getElementById("bimg");
                bigimg.src = activesmallImg.src;
 }}});
 
 var buttonclicked= 0;
 
-var numOnCart = $("#cart-count");
-function addToCart(prodSrc,prodName,prodPrice){
+
+function addToCart(prodId,prodSrc,prodName,prodPrice){
  buttonclicked = buttonclicked+1;
  
  
- var product={src : prodSrc,
+ var product={id : prodId,
+              src : prodSrc,
               name : prodName,
               price : prodPrice,
               numberOf : buttonclicked } 
@@ -66,17 +67,14 @@ function addToCart(prodSrc,prodName,prodPrice){
       prodCard.push(product);
       localStorage.setItem("prodCard",JSON.stringify(prodCard))
   }else{
+    
     var data = JSON.parse(localStorage.getItem("prodCard"));
-    if(product.numberOf>1){
-    data = data.slice(0,data.length-1);
-    data.push(product);
-    localStorage.setItem("prodCard",JSON.stringify(data))
-    console.log(data)
-    }else{
-    data.push(product);
-    localStorage.setItem("prodCard",JSON.stringify(data))
-    console.log(data)
+      data.push(product)
+      localStorage.setItem("prodCard",JSON.stringify(data))
+    
     }
   }
+  prodCard=JSON.parse(localStorage.getItem("prodCard"));
+  $("#cart-count").text(prodCard.length);
 
-}
+
